@@ -26,7 +26,7 @@ for (k = 0; k < strlen(e); k++)
 {
 if (e[k] < 48 || e[k] > 57)
 {
-printf("Erroe\n");
+printf("Error\n");
 return (1);
 }
 }
