@@ -18,6 +18,8 @@ if (s1 == NULL)
 s1 = "";
 if (s2 == NULL)
 s2 = "";
+while (s1[i])
+i++;
 
 while (s1[k])
 k++;
@@ -40,6 +42,7 @@ str[j] = s1[j];
 if (j >= i)
 {
 str[j] = s2[k];
+k++;
 }
 j++;
 }
