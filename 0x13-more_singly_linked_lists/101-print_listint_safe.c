@@ -1,12 +1,12 @@
 #include "lists.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * check_looped_listint - ....
  * @head: ....
- * Return: ...
+ * Return: ....
  */
-
 size_t check_looped_listint(const listint_t *head)
 {
 	const listint_t *tortoise, *hare;
@@ -22,6 +22,7 @@ size_t check_looped_listint(const listint_t *head)
 	{
 		if (tortoise == hare)
 			break;
+
 		tortoise = tortoise->next;
 		hare = (hare->next)->next;
 	}
@@ -35,6 +36,7 @@ size_t check_looped_listint(const listint_t *head)
 			tortoise = tortoise->next;
 			hare = hare->next;
 		}
+
 		tortoise = tortoise->next;
 		while (tortoise != hare)
 		{
@@ -47,7 +49,7 @@ size_t check_looped_listint(const listint_t *head)
 }
 
 /**
- * print_listint_safe - ....
+ * print_listint_safe - .....
  * @head: ....
  * Return: ...
  */
@@ -67,7 +69,6 @@ size_t print_listint_safe(const listint_t *head)
 			head = head->next;
 		}
 	}
-
 	else
 	{
 		for (index = 0; index < nodes; index++)
@@ -75,8 +76,7 @@ size_t print_listint_safe(const listint_t *head)
 			printf("[%p] %d\n", (void *)head, head->n);
 			head = head->next;
 		}
-
-		printf("-> [%p} %d\n", (void *)head, head->n);
+		printf("-> [%p] %d\n", (void *)head, head->n);
 	}
 	return (nodes);
 }
