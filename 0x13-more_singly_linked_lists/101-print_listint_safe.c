@@ -33,6 +33,13 @@ size_t check_looped_listint(const listint_t *head)
 		{
 			nodes++;
 			tortoise = tortoise->next;
+			hare = hare->next;
+		}
+		tortoise = tortoise->next;
+		while (tortoise != hare)
+		{
+			nodes++;
+			tortoise = tortoise->next;
 		}
 		return (nodes);
 	}
